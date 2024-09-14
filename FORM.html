@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FORM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+	
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+	.txt{
+		font-family: kanit;
+	}	
+</style>
+	
+<script>
+	function myFuction()
+	{
+		let x = document.getElementById("txtemail").value;
+		alert("Email คุณคือ :" + x);
+		alert("ลงทะเบียนเรียบร้อย \n\r ฮ่าๆๆข้อมูลคุณถูกจดจำแล้ว เสร็จแน่ !!!");
+	}
+	
+	function testlogin()
+	{
+		var y = document.getElementById("txtpass").value;
+		alert("Password คุณคือ :" + y);
+		if(y == "123")
+		{
+			alert("รหัสผ่านถูกต้อง");
+			document.getElementById("show").innerHTML = 
+			"<div class='alert alert-primary' role='alert'>คุณได้เข้าสู่าระบบเรียบร้อยแล้ว</div>";
+		}
+		else{
+			alert("รหัสผ่านของคุณไม่ถูกต้อง !!!!")
+			document.getElementById("show").innerHTML = 
+			"<div class='alert alert-danger' role='alert'>กรุณาตรวจสอบรหัสผ่านใหม่อีกครั้ง</div>";
+		}
+	}
+	function agelimit()
+	{
+		var age = document.getElementById("agecheck").value;
+	    var Fname = document.getElementById("txtname").value;
+		var Lsname = document.getElementById("txtlastname").value;
+		
+		alert("อายุของคุณคือ :" + age);
+		if(age >= "16" & age < "55")
+		{
+			alert("อายุของคุณผ่านตามเงื่อนไขที่กำหนดไว้");
+		    document.getElementById("show").innerHTML =
+			"<div class='alert alert-primary' role='alert'>ยินดีด้วยคุณ ^_^ <br>คุณ "+ Fname+ " " + Lsname+"<br></div><div class='alert alert-warning' role='alert'>คุณได้รับเงิน Digital Wallet 10,000 Baht</div>"; 
+		}
+		else if(age >= "55")
+		{
+			alert("อายุของคุณผ่านตามเงื่อนไขที่กำหนดไว้");
+			document.getElementById("show").innerHTML =
+			"<div class='alert alert-primary' role='alert'>ยินดีด้วยคุณ ^_^ <br>คุณ "+ Fname+ " " + Lsname+"<br></div><div class='alert alert-warning' role='alert'>คุณได้รับเงิน Digital Wallet 10,000 Baht</div><div class='alert alert-success' role='alert'>คุณได้สิทธิพิเศษรับเงิน Digital Wallet เพิ่มอีก 10,000 Baht</div>";; 
+		}
+		else{
+			alert("อายุของคุณไม่ผ่านตามเงื่อนไขที่กำหนดไว้ !!!!")
+			document.getElementById("show").innerHTML = 
+			"<div class='alert alert-primary' role='alert'>เสียใจด้วยน่ะ T T <br>คุณ "+ Fname+ " " + Lsname+"<br></div><div class='alert alert-danger' role='alert'>คุณไม่ได้รับสิทธฺในการรับเงิน Digital Wallet</div>";
+		}
+	}
+</script>
+</head>
+
+<body>
+	<p id="show">
+
+	</p>
+<!--	
+	<div class="alert alert-danger" role="alert">
+		Sales !!!
+		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Shopee-logo.jpg" class="img-fluid col-1">
+		<a href="https://getbootstrap.com/docs/5.3/components/alerts/">Shop เลยย</a>
+	</div>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+-->
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<form>
+				  <div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">Email address/ Phone Number</label>
+					<input type="email" class="form-control" id="txtemail">
+					<div id="emailHelp" class="form-text">โปรดกรอกอีเมล์หรือเบอร์มือถือ</div>
+				  </div>
+				  <div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="password" class="form-control" id="txtpass">
+				  </div>
+				  <div class="mb-3 form-check">
+					<input type="checkbox" class="form-check-input" id="exampleCheck1">
+					<label class="form-check-label" for="exampleCheck1">Check me out</label>
+				  </div>
+				  <div class="mb-3">
+				  	<label class="form-label">Reason</label>
+				  	<textarea class="form-control" rows="10"></textarea>
+				  </div>
+				  <button type="button" class="btn btn-primary" onClick="myFuction()">Submit</button>
+				  <button type="button" class="btn btn-secondary" onClick="testlogin()">Login</button>
+				</form>
+			</div>
+			<div class="col-8">
+				<div class="mb-3 row">
+					<label  class="col-sm-2 col-form-label">Name</label>
+					<div class="col-sm-10">
+					  <input type="text"  class="form-control" id="txtname">
+					</div>
+				</div>
+
+				<div class="mb-3 row">
+					<label  class="col-sm-2 col-form-label">Last Name</label>
+					<div class="col-sm-10">
+					  <input type="text"  class="form-control" id="txtlastname">
+					</div>
+				</div>
+				
+				<div class="mb-3 row">
+					<label  class="col-sm-2 col-form-label">Moblie Number</label>
+					<div class="col-sm-10">
+					  <input type="text"  class="form-control">
+					</div>
+				</div>
+				
+				<div class="mb-3 row">
+					<label  class="col-sm-2 col-form-label">Age</label>
+					<div class="col-sm-10">
+					  <input type="text"  class="form-control" id="agecheck">
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<label class="col-sm-2 col-form-label">Gender</label>
+					<div class="col-sm-10">
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+						  <label class="form-check-label" for="flexRadioDefault1">
+							Male
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+						  <label class="form-check-label" for="flexRadioDefault2">
+							Female
+						  </label>
+						</div>
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<label class="col-sm-2 col-form-label">Status</label>
+					<div class="col-sm-10">
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="">
+						  <label class="form-check-label">
+							Married
+						  </label>
+						</div>
+<!--
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="">
+						  <label class="form-check-label">
+							แต่งงานแล้ว
+						  </label>
+						</div>
+-->
+					</div>
+				</div>
+				<div class="d-grid gap-2">
+				  <button class="btn btn-primary" type="button" onClick="agelimit()">ตรวสอบเงิน Digital Wallet</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

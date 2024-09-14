@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-image: url("https://static.vecteezy.com/system/resources/previews/004/968/002/non_2x/cute-abstract-modern-background-free-vector.jpg");
+	background-color: white; 
+	background-repeat: no-repeat;
+
+}
+table{
+		width:100%;
+		border-spacing: 38px;
+}
+
+td{
+		border: 0px solid black;
+					
+}
+.img_idol_01{
+		width:700px; 
+		height:875px;
+		text-align: center;
+}
+.pic_idol_01{
+		background-color: lightpink;
+        opacity: 0.9;
+        width: 100%;
+		border-radius: 5%;
+		max-width: 100%;
+		border:0px;
+}
+.pic_idol_02{
+		background-color: lightpink;
+        opacity: 0.9;
+        width: 100%;
+		border-radius: 5%;
+}
+.pic_idol_03{
+		background-color: lightpink;
+        opacity: 0.9;
+        width: 100%;
+		border-radius: 5%;
+}
+.pic_idol_04{
+		background-color: lightpink;
+        opacity: 0.9;
+        width: 100%;
+		border-radius: 5%;
+}
+.pic_idol_05{
+		background-color: lightpink;
+        opacity: 0.9;
+        width: 100%;
+		border-radius: 5%;
+}
+h1name {
+            color: #94538b;
+            font-size: 35px;
+		    color:#94538B;
+		    font-family: kanit;
+			font-size: 70px;
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+}
+h2thainamne {
+		font-family: 'kanit';font-size: 35px;font-weight: 350;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: 1.2px;color: #fe8aa5;
+}
+h2engname{
+		font-family: 'kanit';font-size: 35px;font-weight: 350;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: 1.2px;color: #fe8aa5;
+}
+tdleft01_main{
+		vertical-align: center;
+}
+.tdright01_main{
+		vertical-align: bottom; background-color: black; opacity: 0.7;height: 200px;padding: 40px
+}
+.tdright02_main{
+		vertical-align: top; background-color: black; opacity: 0.7;height: 200px;padding: 40px
+}
+.fonttopic_rightpink_td02{
+		font-family: 'kanit';font-size: 20px;font-weight: 300;color: #fe8aa5;
+}
+.fontpara_rightpurple_td02{
+		font-family: 'kanit';font-size: 20px;font-weight: 300;color: #C480FF;
+}
+.fontpara_rightlightpink_td02{
+		font-family: 'kanit';font-size: 20px;font-weight: 300;color: #fe8aa5;
+}
+.font_credit{
+		font-family: 'kanit';font-size: 25px;font-weight: 350;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: 1.2px;color: #fe8aa5;
+}
